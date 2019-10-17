@@ -23,7 +23,7 @@ if __name__ == '__main__':
 	testX = utilities.load_test(folder_path, shape)					# load test data
 
 	class_weight = utilities.weight_classes(folder_path, classes)		# weight classes so that we can later provide
-																		# bias to minority classes during training
+										# bias to minority classes during training
 
 	''' 2. Build and Fit the model '''
 
