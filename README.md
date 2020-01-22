@@ -28,14 +28,8 @@ The [weights.best.hdf5](https://drive.google.com/open?id=1VcB9HDtPdH0WwP29ygxK22
 
 ## 2. Project Structure
 
-- `main.py` : main function, use it to change task ('r' or 'c') and hyperparameters (i.e., learning rate, number of epochs)
+- `main.py` : main function, use it change hyperparameters (i.e., learning rate, number of epochs)
 
-- `model.py` : contains the regression and classification neural network models
+- `network.py` : build and fit the model
 
-- `regression.py` : run regression using the relative model from model.py, use it to change the hyperparameters of the model (i.e., number of neurons)
-
-- `classification.py` : run classification using the relative model from model.py, use it to change the hyperparameters of the model (i.e., number of neurons)
-
-- `utilities.py` : contains plot functions and common functions among the different files (i.e., load dataset which is used both for regression and classification)
-
-- `deep_classification.py` : deep classifier used to plot the distribution of latent features at different training stages. It contains also the deep model
+- `utilities.py` : load dataset, plot learning curves, etc.
