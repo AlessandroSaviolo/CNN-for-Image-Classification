@@ -9,7 +9,7 @@ from keras.preprocessing.image import ImageDataGenerator
 
 
 def load_data(folder_path, batch_size, shape, classes):
-	datagenerator = ImageDataGenerator(							# load and augment data
+	datagenerator = ImageDataGenerator(						# load and augment data
 		rescale=1. / 255,
 		rotation_range=20,
 		shear_range=0.2,
@@ -42,7 +42,7 @@ def load_classes(folder_path):
 
 
 def weight_classes(folder_path, classes):
-	class_count = {}													# count the number of images per class
+	class_count = {}								# count the number of images per class
 	count = 0
 	for i in range(len(classes)):
 		for _ in glob.glob(folder_path + '/train/' + classes[i] + '/*.jpg'):
@@ -54,7 +54,7 @@ def weight_classes(folder_path, classes):
 
 
 def load_test(folder_path, shape):
-	testX = []  														# load test images
+	testX = []  									# load test images
 	for img in glob.glob(folder_path + '/test/*.jpg'):
 		img = cv2.imread(img)
 		img = cv2.resize(img, (shape, shape))
@@ -73,7 +73,7 @@ def output_predictions(predictions, classes, testX):
 
 
 def plot_learning_curves(history):
-	plt.figure(figsize=[8, 6])											# loss curve
+	plt.figure(figsize=[8, 6])							# loss curve
 	plt.plot(history.history['loss'], 'b', linewidth=3.0)
 	plt.plot(history.history['val_loss'], 'r', linewidth=3.0)
 	plt.legend(['Training loss', 'Validation Loss'], fontsize=18)
@@ -82,7 +82,7 @@ def plot_learning_curves(history):
 	plt.title('Loss Curves', fontsize=16)
 	plt.savefig('loss_plot.png')
 	plt.show()
-	plt.figure(figsize=[8, 6])											# accuracy curve
+	plt.figure(figsize=[8, 6])							# accuracy curve
 	plt.plot(history.history['accuracy'], 'b', linewidth=3.0)
 	plt.plot(history.history['val_accuracy'], 'r', linewidth=3.0)
 	plt.legend(['Training Accuracy', 'Validation Accuracy'], fontsize=18)
