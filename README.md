@@ -33,3 +33,21 @@ The [weights.best.hdf5](https://drive.google.com/open?id=1VcB9HDtPdH0WwP29ygxK22
 - `network.py` : build and fit the model
 
 - `utilities.py` : load dataset, plot learning curves, etc.
+
+## 3. License
+
+Copyright (C) 2021 Alessandro Saviolo, [FlexSight SRL](http://www.flexsight.eu/), Padova, Italy
+```
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+```
